@@ -1,0 +1,111 @@
+//create user
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "Edi Kurniawan",
+    "email": "admin@mail.com",
+    "password": "123456",
+    "confPassword": "123456",
+    "role": "admin"
+}
+
+###
+//create user
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "Edi Kurniawan",
+    "email": "user@mail.com",
+    "password": "123456",
+    "confPassword": "123456",
+    "role": "user"
+}
+
+###
+//get All Users
+GET http://localhost:5000/users
+
+###
+//get single user
+GET http://localhost:5000/users/37f5613d-e5b5-4122-908f-4580a43615d2
+
+###
+//Update User
+PATCH http://localhost:5000/users/f011bb9c-f26c-44c9-8429-c0dc840b1965
+Content-Type: application/json
+
+{
+    "name": "Edi",
+    "email": "215100036u@umitra.ac.id",
+    "password": "",
+    "confPassword": "",
+    "role": "user"
+}
+
+###
+//Delete User
+DELETE http://localhost:5000/users/baa79e42-ce1c-4a01-b441-239d6155ba3d
+
+
+###
+//Login Admin
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "215100036p@umitra.ac.id",
+    "password": "123456"
+}
+
+###
+//Login User
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "admin@gmail.com",
+    "password": "123456"
+}
+
+###
+//cek User
+GET http://localhost:5000/me
+
+###
+//Logout
+DELETE http://localhost:5000/logout
+
+###
+//get All Product
+GET http://localhost:5000/products
+
+###
+//get single Product
+GET http://localhost:5000/products/c4c9503a-391b-44bd-8bda-ef7a4d984014
+
+
+###
+//POST data product
+POST http://localhost:5000/products
+Content-Type: application/json
+
+{
+    "name": "product 6",
+    "price": "987"
+}
+
+###
+//Update data product
+PATCH http://localhost:5000/products/c4c9503a-391b-44bd-8bda-ef7a4d984014
+Content-Type: application/json
+
+{
+    "name": "product 6 up",
+    "price": "984"
+}
+
+###
+//Update data product
+DELETE http://localhost:5000/products/1c006b4f-5143-494f-986d-f4cb6332d499
