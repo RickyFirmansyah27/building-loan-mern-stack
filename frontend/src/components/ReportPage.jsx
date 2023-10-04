@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
 const RekBookingReportPage = () => {
   const [reportContent, setReportContent] = useState([]);
@@ -19,16 +19,19 @@ const RekBookingReportPage = () => {
 
   const handleDownloadPDF = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/reports/rekbookings', {
-        responseType: 'blob', // Response dalam bentuk blob
-      });
+      const response = await axios.get(
+        "http://localhost:5000/reports/rekbookings",
+        {
+          responseType: "blob", // Response dalam bentuk blob
+        }
+      );
 
       // Buat blob URL dan download
-      const blob = new Blob([response.data], { type: 'application/pdf' });
+      const blob = new Blob([response.data], { type: "application/pdf" });
       const url = URL.createObjectURL(blob);
-      const link = document.createElement('a');
+      const link = document.createElement("a");
       link.href = url;
-      link.setAttribute('download', 'rekBooking_report.pdf');
+      link.setAttribute("download", "rekBooking_report.pdf");
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link); // Hapus elemen <a> setelah diunduh
@@ -39,11 +42,13 @@ const RekBookingReportPage = () => {
 
   return (
     <div>
-      <h1>Laporan Daftar Booking</h1>
-      <button onClick={handleDownloadPDF}>Download PDF</button>
+      <div style={{ marginBottom: '10px'}}>
+        <h1 className="title">Laporan Daftar Booking</h1>
+        <h2 className="subtitle">Tampilan Laporan</h2>
+        <button onClick={handleDownloadPDF}>Download PDF</button>
+      </div>
       <div>
-        <h2>Tampilan Laporan</h2>
-        <table>
+        <table className="table is-striped is-fullwidth">
           <thead>
             <tr>
               <th>No</th>
