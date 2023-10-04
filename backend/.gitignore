@@ -1,0 +1,4 @@
+package-lock.json
+.env
+request.request
+/node_modules

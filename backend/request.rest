@@ -3,7 +3,7 @@ POST http://localhost:5000/users
 Content-Type: application/json
 
 {
-    "name": "Edi Kurniawan",
+    "name": "ricky firmansyah",
     "email": "admin@mail.com",
     "password": "123456",
     "confPassword": "123456",
@@ -33,20 +33,20 @@ GET http://localhost:5000/users/37f5613d-e5b5-4122-908f-4580a43615d2
 
 ###
 //Update User
-PATCH http://localhost:5000/users/f011bb9c-f26c-44c9-8429-c0dc840b1965
+PATCH http://localhost:5000/users/2897a237-fe8e-47aa-aaed-a696e816ea76
 Content-Type: application/json
 
 {
-    "name": "Edi",
-    "email": "215100036u@umitra.ac.id",
-    "password": "",
-    "confPassword": "",
+    "name": "User Testing",
+    "email": "user@mail.com",
+    "password": "user123",
+    "confPassword": "user123",
     "role": "user"
 }
 
 ###
 //Delete User
-DELETE http://localhost:5000/users/baa79e42-ce1c-4a01-b441-239d6155ba3d
+DELETE http://localhost:5000/users/7b8b9ff2-7b7a-49ec-aeb1-2e0113991dbd
 
 
 ###
